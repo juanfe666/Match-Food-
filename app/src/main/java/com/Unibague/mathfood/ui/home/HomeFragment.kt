@@ -5,9 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.Unibague.mathfood.databinding.FragmentHomeBinding
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 
 class HomeFragment : Fragment() {
 
@@ -16,6 +20,10 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    //Creamos nuestra variable de autenticación firebase
+    private lateinit var auth: FirebaseAuth
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,7 +39,33 @@ class HomeFragment : Fragment() {
 
         //...................................
 
+// Initialize Firebase Auth
+        auth = Firebase.auth
 
+
+// -------------------------
+// Lógica del Login
+// -------------------------
+
+        binding.buttonLogin.setOnClickListener {
+
+            val nombre : String = binding.inputTextNombre.text.toString()
+            val password : String = binding.inputTextPassword.text.toString()
+
+            auth.signInWithEmailAndPassword(nombre, password).addOnCompleteListener {
+                    task->
+                if(task.isSuccessful)
+                {
+                    val toast = Toast.makeText(context, "¡Datos correctos!", Toast.LENGTH_SHORT)
+                    toast.show()
+                }
+                else
+                {
+                    val toast = Toast.makeText(context, "Datos son incorrectos! $nombre - $password", Toast.LENGTH_SHORT)
+                    toast.show()
+                }
+            }
+        }
         //....................................
 
 
