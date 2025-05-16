@@ -4,20 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9B9696"
+    android:background="#E7B4B4"
     tools:context=".ui.home.HomeFragment">
 
     <LinearLayout
-        android:layout_width="326dp"
-        android:layout_height="310dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="307dp"
+        android:layout_height="586dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="196dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="97dp"
+            android:layout_height="117dp"
+            android:src="@drawable/iconoo" />
 
         <EditText
             android:id="@+id/inputTextNombre"
@@ -39,7 +45,22 @@
             android:id="@+id/buttonLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Loguear" />
+            android:background="#F44336"
+            android:text="Iniciar" />
+
+        <Button
+            android:id="@+id/buttonRegistrarse"
+            android:layout_width="268dp"
+            android:layout_height="64dp"
+            android:text="Registrarse"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="117dp"
+            android:layout_height="128dp"
+            android:src="@drawable/google_logo" />
+
 
     </LinearLayout>
 

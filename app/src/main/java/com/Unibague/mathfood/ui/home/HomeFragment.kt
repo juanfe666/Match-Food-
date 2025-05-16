@@ -8,10 +8,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.Unibague.mathfood.Registro
 import com.Unibague.mathfood.databinding.FragmentHomeBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import android.content.Intent
+import com.Unibague.mathfood.ui.MapsActivity
+
 
 class HomeFragment : Fragment() {
 
@@ -58,6 +62,11 @@ class HomeFragment : Fragment() {
                 {
                     val toast = Toast.makeText(context, "¡Datos correctos!", Toast.LENGTH_SHORT)
                     toast.show()
+
+                    val intent = Intent(activity, MapsActivity::class.java)
+                    startActivity(intent)
+
+
                 }
                 else
                 {
@@ -67,6 +76,15 @@ class HomeFragment : Fragment() {
             }
         }
         //....................................
+
+        binding.buttonRegistrarse.setOnClickListener{
+            val toast = Toast.makeText(context, "Funcionó el boton!", Toast.LENGTH_SHORT)
+            toast.show()
+
+            val intent = Intent(activity, Registro::class.java)
+            startActivity(intent)
+
+        }
 
 
         return root
