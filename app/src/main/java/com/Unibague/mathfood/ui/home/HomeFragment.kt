@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import android.content.Intent
 import com.Unibague.mathfood.ui.MapsActivity
+import com.Unibague.mathfood.ui.RegistroActivity
 
 
 class HomeFragment : Fragment() {
@@ -81,7 +82,7 @@ class HomeFragment : Fragment() {
             val toast = Toast.makeText(context, "Funcionó el boton!", Toast.LENGTH_SHORT)
             toast.show()
 
-            val intent = Intent(activity, Registro::class.java)
+            val intent = Intent(activity, RegistroActivity::class.java)
             startActivity(intent)
 
         }

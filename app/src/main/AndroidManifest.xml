@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,17 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MATHFOOD"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.RegistroActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC8yi_u9ApTe6ygYWz1lmSpTBW8c-P4e7c" />
+
         <activity
             android:name=".ui.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
-
-
-
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -33,10 +36,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
