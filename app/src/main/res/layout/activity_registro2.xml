@@ -7,4 +7,56 @@
     android:layout_height="match_parent"
     tools:context=".ui.RegistroActivity">
 
+    <LinearLayout
+        android:layout_width="405dp"
+        android:layout_height="559dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="90dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Digite todos los datos para que su registro sea exitoso" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Introduzca un nuevo ususario"
+            android:inputType="text"
+            android:text="Introduzca un nuevo usuario" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Introduzca una contraseña"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/editTextPhone2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Introduzca su numero de telefono"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fecha de nacimiento"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terminar registro"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
